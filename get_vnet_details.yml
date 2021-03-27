@@ -16,11 +16,11 @@ steps:
 - task: AzurePowerShell@5
   displayName: run powershell script to get vnet details
   inputs:
-    azureSubscription: 'aks_powershell_connection'
+    azureSubscription: 'aks_vnet_details'
     ScriptType: 'FilePath'
     ScriptPath: '$(Build.SourcesDirectory)/vnet.ps1'
     ScriptArguments: '-$rsg aks -$vnet aks_vnet'
-    azurePowerShellVersion: LatestVersion
+    azurePowerShellVersion: 'LatestVersion'
     workingDirectory: '$(Build.SourcesDirectory)'
 
 - task: CopyFiles@2
