@@ -10,7 +10,7 @@ variables:
   $vmname: 'windows-2019'
 
 pool:
-  vmImage: '$vmname'
+  vmImage: vs2017-win2016
 
 steps:
 - task: AzurePowerShell@5
